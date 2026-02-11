@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Scoop - Ice Cream Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div>
+            <h1>The Scoop</h1>
+            <p>Your favorite ice cream destination</p>
+            <button class="btn" onclick="showMenu()">Explore Menu</button>
+        </div>
+    </div>
+
+    <div class="menu" id="menu">
+        <h2>Our Ice Cream Menu</h2>
+        <div class="flavor">
+            <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Vanilla Ice Cream">
+            <h3>Vanilla</h3>
+            <p>Price: ₱50 (Small), ₱70 (Medium), ₱90 (Large)</p>
+            <div class="size">
+                <label>Size:</label>
+                <select id="size-vanilla">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <div class="topping">
+                <label>Toppings:</label>
+                <select id="topping-vanilla">
+                    <option value="none">None</option>
+                    <option value="sprinkles">Sprinkles</option>
+                    <option value="choco-chips">Chocolate Chips</option>
+                    <option value="nuts">Nuts</option>
+                </select>
+            </div>
+            <div class="spinner">
+                <button onclick="changeQty('vanilla', -1)">-</button>
+                <input type="number" id="qty-vanilla" value="1" min="1">
+                <button onclick="changeQty('vanilla', 1)">+</button>
+            </div>
+            <button class="btn" onclick="addToCart('Vanilla')">Add to Cart</button>
+        </div>
+        <div class="flavor">
+            <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Chocolate Ice Cream">
+            <h3>Chocolate</h3>
+            <p>Price: ₱55 (Small), ₱75 (Medium), ₱95 (Large)</p>
+            <div class="size">
+                <label>Size:</label>
+                <select id="size-chocolate">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <div class="topping">
+                <label>Toppings:</label>
+                <select id="topping-chocolate">
+                    <option value="none">None</option>
+                    <option value="sprinkles">Sprinkles</option>
+                    <option value="choco-chips">Chocolate Chips</option>
+                    <option value="nuts">Nuts</option>
+                </select>
+            </div>
+            <div class="spinner">
+                <button onclick="changeQty('chocolate', -1)">-</button>
+                <input type="number" id="qty-chocolate" value="1" min="1">
+                <button onclick="changeQty('chocolate', 1)">+</button>
+            </div>
+            <button class="btn" onclick="addToCart('Chocolate')">Add to Cart</button>
+        </div>
+        <div class="flavor">
+            <img src="https://images.unsplash.com/photo-1559598467-f8b76c8155bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Strawberry Ice Cream">
+            <h3>Strawberry</h3>
+            <p>Price: ₱60 (Small), ₱80 (Medium), ₱100 (Large)</p>
+            <div class="size">
+                <label>Size:</label>
+                <select id="size-strawberry">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <div class="topping">
+                <label>Toppings:</label>
+                <select id="topping-strawberry">
+                    <option value="none">None</option>
+                    <option value="sprinkles">Sprinkles</option>
+                    <option value="choco-chips">Chocolate Chips</option>
+                    <option value="nuts">Nuts</option>
+                </select>
+            </div>
+            <div class="spinner">
+                <button onclick="changeQty('strawberry', -1)">-</button>
+                <input type="number" id="qty-strawberry" value="1" min="1">
+                <button onclick="changeQty('strawberry', 1)">+</button>
+            </div>
+            <button class="btn" onclick="addToCart('Strawberry')">Add to Cart</button>
+        </div>
+        <!-- Add more flavors as needed -->
+    </div>
+
+    <div class="cart" id="cart">
+        <h3>Your Cart</h3>
+        <div id="cart-items"></div>
+        <div class="checkout">
+            <button class="btn" onclick="checkout()">Checkout</button>
+     
