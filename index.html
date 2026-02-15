@@ -1,19 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Scoop - Aesthetic Ice Cream Shop</title>
-    <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Milk Tea Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+<style>
+.landing-buttons{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+</style>
+
 </head>
+
 <body>
-    <section class="landing">
-        <div class="landing-content">
-            <h1>The Scoop</h1>
-            <p>Indulge in creamy delights, one scoop at a time.</p>
-            <button class="enter-btn" onclick="window.location.href='dashboard.html'">Enter Shop</button>
-        </div>
-    </section>
+
+<section class="landing">
+  <div class="landing-content">
+    <h1>Milk Tea Shop</h1>
+    <p>Refreshing Milk Tea • Snacks • Desserts 🧋</p>
+
+    <div class="landing-buttons">
+      <a href="dashboard.html" class="btn">View Menu</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Order Form -->
+<form action="https://formspree.io/f/xvzbabae" method="POST">
+
+  <input 
+    type="text" 
+    name="customer_name" 
+    id="name" 
+    placeholder="Your Name" 
+    required
+  >
+
+  <input 
+    type="email" 
+    name="_replyto" 
+    id="email" 
+    placeholder="Your Email" 
+    required
+  >
+
+  <textarea 
+    name="message" 
+    id="message" 
+    placeholder="Your Order Details" 
+    required
+  ></textarea>
+
+  <!-- Redirect after successful submission -->
+  <input type="hidden" name="_next" value="thankyou.html">
+
+  <!-- Spam protection -->
+  <input type="text" name="_honey" style="display:none">
+
+  <button type="submit">Send Order</button>
+
+</form>
+
 </body>
-</html>
+<html>
